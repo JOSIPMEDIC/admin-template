@@ -32,7 +32,7 @@ const useUpdateData = <T>({ resource }: Props) => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-      }
+      },
     ).then((response) => response.json());
   };
   return useMutation({

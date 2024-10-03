@@ -1,12 +1,11 @@
 import { UseQueryOptions } from "@tanstack/react-query";
 import useGetReferenceMany from "./useReferenceMany";
 
-
 export type GetOneProps<T> = {
   resource: string;
   id: string | undefined;
   queryFilters?: Record<string, string | number | undefined>;
-} & Omit<UseQueryOptions<unknown, unknown, T>, "queryKey" | "queryFn">
+} & Omit<UseQueryOptions<unknown, unknown, T>, "queryKey" | "queryFn">;
 
 const useReferenceOne = <T>({
   resource,

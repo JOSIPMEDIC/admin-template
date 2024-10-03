@@ -83,7 +83,7 @@ export function DataTable<TData, TValue>({
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
                   );
@@ -102,7 +102,7 @@ export function DataTable<TData, TValue>({
                       e.stopPropagation();
                       router.push(
                         // `/dashboard/articles/details/${(row?.original as any)?.id}`
-                        onDoubleClickLink(row?.original)
+                        onDoubleClickLink(row?.original),
                       );
                     }
                   }}
@@ -111,7 +111,7 @@ export function DataTable<TData, TValue>({
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}

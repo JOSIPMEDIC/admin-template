@@ -102,7 +102,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               });
               router.push("/dashboard/articles");
             },
-          }
+          },
         );
   };
 

@@ -9,7 +9,7 @@ type Props = {
 };
 
 const useCreateData = <T>({ resource }: Props) => {
-  const token = typeof window !== 'undefined' && localStorage.getItem("token");
+  const token = typeof window !== "undefined" && localStorage.getItem("token");
   return useMutation({
     mutationFn: async (data: T) => {
       const response = await fetch(
@@ -19,10 +19,12 @@ const useCreateData = <T>({ resource }: Props) => {
           body: JSON.stringify(data),
           headers: {
             "Content-Type": "application/json",
-            ...(resource !== "auth/login" && {Authorization: `Bearer ${token}`}),
+            ...(resource !== "auth/login" && {
+              Authorization: `Bearer ${token}`,
+            }),
           },
           method: "POST",
-        }
+        },
       );
       return (await response.json()) as any;
     },

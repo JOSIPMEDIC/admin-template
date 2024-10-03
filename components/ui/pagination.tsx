@@ -59,7 +59,7 @@ const PaginationLink = ({
         size,
       }),
       disabled && "cursor-not-allowed opacity-50 pointer-events-none",
-      className
+      className,
     )}
     {...props}
   />

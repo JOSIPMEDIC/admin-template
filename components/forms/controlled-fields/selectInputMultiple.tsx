@@ -50,7 +50,7 @@ const multiSelectVariants = cva(
     defaultVariants: {
       variant: "default",
     },
-  }
+  },
 );
 interface MultiSelectProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -87,14 +87,14 @@ export const MultiSelectInput = React.forwardRef<
       label,
       ...props
     },
-    ref
+    ref,
   ) => {
     const form = useFormContext();
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
 
     const toggleOption = (
       option: string,
-      field: ControllerRenderProps<FieldValues, string>
+      field: ControllerRenderProps<FieldValues, string>,
     ) => {
       const newSelectedValues = field.value.includes(option)
         ? field.value.filter((value: any) => value !== option)
@@ -139,7 +139,7 @@ export const MultiSelectInput = React.forwardRef<
                     onClick={handleTogglePopover}
                     className={cn(
                       "flex w-full p-1 rounded-md border min-h-10 h-auto items-center justify-between bg-inherit hover:bg-inherit",
-                      className
+                      className,
                     )}
                   >
                     {field.value.length > 0 ? (
@@ -209,7 +209,7 @@ export const MultiSelectInput = React.forwardRef<
                               "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
                               field.value.length === options.length
                                 ? "bg-primary text-primary-foreground"
-                                : "opacity-50 [&_svg]:invisible"
+                                : "opacity-50 [&_svg]:invisible",
                             )}
                           >
                             <CheckIcon className="h-4 w-4" />
@@ -229,7 +229,7 @@ export const MultiSelectInput = React.forwardRef<
                                   "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
                                   isSelected
                                     ? "bg-primary text-primary-foreground"
-                                    : "opacity-50 [&_svg]:invisible"
+                                    : "opacity-50 [&_svg]:invisible",
                                 )}
                               >
                                 <CheckIcon className="h-4 w-4" />
@@ -274,7 +274,7 @@ export const MultiSelectInput = React.forwardRef<
         )}
       />
     );
-  }
+  },
 );
 
 MultiSelectInput.displayName = "MultiSelectInput";

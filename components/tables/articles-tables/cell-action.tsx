@@ -43,7 +43,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
             variant: "success",
           });
         },
-      }
+      },
     );
   };
 

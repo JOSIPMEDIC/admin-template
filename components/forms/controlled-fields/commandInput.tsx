@@ -101,7 +101,7 @@ const CommandSelectInput = ({
                             "ml-auto h-4 w-4",
                             field.value === item.id
                               ? "opacity-100"
-                              : "opacity-0"
+                              : "opacity-0",
                           )}
                         />
                       </CommandItem>

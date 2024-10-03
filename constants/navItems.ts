@@ -1,6 +1,5 @@
 import { NavItem } from "@/types";
 
-
 export const navItems: NavItem[] = [
   // {
   //   title: 'Kontrolna ploča',

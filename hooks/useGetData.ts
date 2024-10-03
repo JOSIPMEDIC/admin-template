@@ -21,9 +21,9 @@ const useGetData = <T>({ resource, key, enabled = true }: Props) => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
-      if(response.status === 401){
+      if (response.status === 401) {
         localStorage.removeItem("token");
         router.push("/");
       }

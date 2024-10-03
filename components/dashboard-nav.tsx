@@ -48,7 +48,7 @@ export function DashboardNav({
                       "flex items-center gap-2 overflow-hidden rounded-md py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
                       path.includes(item.key) ? "bg-accent" : "transparent",
                       item.disabled && "cursor-not-allowed opacity-80",
-                      items.length - 1 === index && "text-primary"
+                      items.length - 1 === index && "text-primary",
                     )}
                     onClick={() => {
                       if (setOpen) setOpen(false);

@@ -25,7 +25,7 @@ const ArticleListCard = ({ data, pagination, setPagination }: Props) => {
             router.push(`/dashboard/articles/details/${article.id}`)
           }
           className={cn(
-            "shadow-md hover:shadow-xl transition-all hover:scale-[101%] cursor-pointer"
+            "shadow-md hover:shadow-xl transition-all hover:scale-[101%] cursor-pointer",
           )}
         >
           <CardHeader className="relative flex flex-row border-b-2 border-secondary p-3 text-md font-bold w-full justify-between items-center">

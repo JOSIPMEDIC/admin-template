@@ -83,12 +83,12 @@ export function ComboboxFormTest() {
                       role="combobox"
                       className={cn(
                         "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                        !field.value && "text-muted-foreground",
                       )}
                     >
                       {field.value
                         ? languages.find(
-                            (language) => language.value === field.value
+                            (language) => language.value === field.value,
                           )?.label
                         : "Select language"}
                       <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -118,7 +118,7 @@ export function ComboboxFormTest() {
                                 "ml-auto h-4 w-4",
                                 language.value === field.value
                                   ? "opacity-100"
-                                  : "opacity-0"
+                                  : "opacity-0",
                               )}
                             />
                           </CommandItem>

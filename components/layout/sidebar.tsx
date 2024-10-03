@@ -24,7 +24,7 @@ export default function Sidebar({ className }: SidebarProps) {
       className={cn(
         `relative  hidden h-screen flex-none border-r bg-card transition-[width] duration-500 md:block`,
         !isMinimized ? "w-72" : "w-[72px]",
-        className
+        className,
       )}
     >
       <div className="hidden p-5 pt-10 lg:block">
@@ -35,7 +35,7 @@ export default function Sidebar({ className }: SidebarProps) {
       <ChevronLeft
         className={cn(
           "absolute -right-3 top-10 z-50  cursor-pointer rounded-full border bg-card text-3xl text-foreground",
-          isMinimized && "rotate-180"
+          isMinimized && "rotate-180",
         )}
         onClick={handleToggle}
       />
